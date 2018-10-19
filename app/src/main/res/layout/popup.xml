@@ -1,38 +1,69 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/popup_1"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#444444"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
-        android:textSize="20dp"
-        android:id="@+id/txtView"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Inserisci il numero id righe e colonne!"
-        android:layout_gravity="center"/>
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="100dp"
+        android:text="Inserisci il numero di\n righe e colonne!"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:textSize="20dp"
+        android:id="@+id/textRighe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="60dp"
-        android:text="Righe:"/>
+        app:layout_constraintStart_toStartOf="@+id/text"
+        android:text="Righe:"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="128dp" />
 
     <EditText
+        android:id="@+id/textBRighe"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/close_popup"
+        app:layout_constraintLeft_toRightOf="@+id/textRighe"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <TextView
+        android:id="@+id/textColonne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/textRighe"
+        android:text="Colonne:"
+        android:textSize="20dp"
+        android:layout_marginTop="56dp"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <EditText
+        android:id="@+id/textBColonne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/textBRighe"
+        app:layout_constraintLeft_toRightOf="@+id/textColonne"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="163dp" />
 
     <Button
         android:id="@+id/close_popup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_marginStart="148dp"
+        android:text="Fatto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        tools:layout_editor_absoluteY="231dp" />
 
-        android:text="Fatto" />
-
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

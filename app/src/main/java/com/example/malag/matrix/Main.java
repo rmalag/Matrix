@@ -22,9 +22,8 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.main);
         final Button insMatrix = (Button) findViewById(R.id.fatto);
         insMatrix.setEnabled(false);
-        final EditText textBoxRighe = (EditText) findViewById(R.id.textBRighe);
-        final EditText textBoxColonne = (EditText) findViewById(R.id.textBColonne);
-        textBoxRighe.addTextChangedListener(new TextWatcher() {
+        EditText textB = (EditText) findViewById(R.id.textB);
+        textB.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -32,44 +31,14 @@ public class Main extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.toString().equals("")) {
-                    insMatrix.setEnabled(false);
-                } else if(textBoxColonne.getText().toString().equals("")){
-                    insMatrix.setEnabled(false);
-                }
-                else
-                    insMatrix.setEnabled(true);
+
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                
             }
         });
-
-        textBoxColonne.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.toString().equals("")) {
-                    insMatrix.setEnabled(false);
-                } else if(textBoxRighe.getText().toString().equals("")){
-                    insMatrix.setEnabled(false);
-                }
-                else
-                    insMatrix.setEnabled(true);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
 
         insMatrix.setOnClickListener(new View.OnClickListener() {
             @Override

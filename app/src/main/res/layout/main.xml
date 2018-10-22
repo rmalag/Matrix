@@ -9,66 +9,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:text="Inserisci il numero di\n\t\trighe e colonne!"
+        android:text="Inserisci gli elementi della matrice\n\t\t\t\t\t separati dalla virgola"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textRighe"
+    <EditText
+        android:id="@+id/textB"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Righe:"
-        android:textSize="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/text"
-        android:layout_marginTop="20dp"
+        android:layout_height="96dp"
+        android:ems="10"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="@+id/text"
-        tools:layout_editor_absoluteY="128dp" />
-
-    <EditText
-        android:id="@+id/textBRighe"
-        android:inputType="number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textRighe"
-        app:layout_constraintStart_toEndOf="@+id/fatto"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="115dp" />
-
-    <TextView
-        android:id="@+id/textColonne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/textRighe"
-        app:layout_constraintTop_toBottomOf="@+id/textRighe"
-        android:text="Colonne:"
-        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/text"
+        app:layout_constraintBottom_toTopOf="@id/fatto"
         android:layout_marginTop="20dp"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="182dp" />
-
-    <EditText
-        android:id="@+id/textBColonne"
-        android:inputType="number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBaseline_toBaselineOf="@id/textColonne"
-        app:layout_constraintStart_toStartOf="@+id/textBRighe"
-        app:layout_constraintTop_toBottomOf="@+id/textBRighe" />
+        android:layout_marginBottom="20dp"
+        android:inputType="textMultiLine"
+        android:maxEms="10"/>
 
     <Button
         android:id="@+id/fatto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="212dp"
+        android:layout_margin="40dp"
         android:background="@drawable/fatto_button"
         android:text="Fatto"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="200dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
